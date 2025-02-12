@@ -1,0 +1,29 @@
+/*---------------FONTS---------------*/
+
+
+/*---------------BODY---------------*/
+* {
+    box-sizing: border-box;
+  }
+
+
+  body, html {
+    background: #EAECE0;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Maru Gothic';
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*---------------HEADER---------------*/
+
+
+
+
+
+  /*---------------MAIN---------------*/
