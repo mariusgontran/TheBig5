@@ -12,13 +12,346 @@
     <meta name="keywords" content="Mental health, The Big 5, self-improvement">
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
+    <!-- Shoelace Components -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/shoelace-autoloader.js"></script>
+
+
 </head>
+
 <body>
-    <h1>The Big 5</h1>
+    <header class="--sl-shadow-large">    
+            <sl-icon name="list" class="menu open-drawer"></sl-icon>
+            <h1>The Big 5</h1>
+    </header>
+
+    <sl-drawer label="Menu" placement="start" class="drawer-placement-start">
+        <a href="#the_big_5">The Big 5</a>
+        <sl-button slot="footer" variant="primary">Close</sl-button>
+    </sl-drawer>
+
+
+
+
+
+
+
+
+   <aside>
+        <div class="group">
+            <sl-tooltip content="Goals and Plans" placement="left">
+                <sl-icon name="bullseye" class="icon"></sl-icon>
+            </sl-tooltip>
+            <sl-tooltip content="Healthy Routines" placement="left">
+                <sl-icon name="alarm" class="icon"></sl-icon>
+            </sl-tooltip>
+            <sl-tooltip content="Social Connections" placement="left">
+                <sl-icon name="people" class="icon"></sl-icon>
+            </sl-tooltip>
+            <sl-tooltip content="Healthy Thinking" placement="left">
+                <sl-icon name="clouds" class="icon"></sl-icon>
+            </sl-tooltip>
+            <sl-tooltip content="Meaningful Activities" placement="left">
+                <sl-icon name="heart-pulse" class="icon"></sl-icon>
+            </sl-tooltip>
+        </div>
+
+    </aside>
+
+
+
+
+    <section id="intro">
+            <div class="circle-container large intro-para">
+                <p>
+                    Good mental health doesn’t happen by chance—it’s built 
+                    through daily habits. Research with over 20,000 
+                    people has revealed five type of actions that 
+                    support mental well-being.
+                </p><br>
+                <p>
+                    Developed by MindSpot, these 
+                    actions are called "The Big 5" and doing them regularly 
+                    is a great way to help you boost resilience, 
+                    improve mood, and maintain a healthier mind.
+                </p>        
+            </div>
+
+
+            <div class="slider-wrapper">
+                <a class="prev">&#10094;</a>
+                <div class="circle-container medium intro-img">
+                </div>
+                <a class="next">&#10095;</a>
+            </div>
+            
+
+
+
+
     
+    </section>
+
+
+
+    <section id="what-is-it">
+
+
+        <div class="circle-container large what-1">
+            <h2>What is it?</h2>
+            <p>
+                The Big 5 is a set of five proven actions that play a 
+                crucial role in maintaining mental well-being. Developed 
+                by MindSpot through research with over 20,000 individuals, 
+                The Big 5 consists of Meaningful Activities, Healthy 
+                Thinking, Goals and Plans, Healthy Routines, and Social 
+                Connections. These are not new or complex ideas—philosophers 
+                and scientists have discussed them for centuries—but 
+                research now shows that they form the foundation of good 
+                mental health. When practiced regularly, they help improve 
+                mood, build resilience, and create a sense of purpose. The 
+                best part? The Big 5 fits easily into daily life, requiring 
+                only small, consistent efforts to make a big impact.
+            </p>
+        </div>
+
+        <div class="circle-container large what-2">
+                <h2>How it works?</h2>
+                <p>
+                    Research has identified a tipping point for mental 
+                    health—people who engage in The Big 5 at least 3-4 
+                    times per week are much more likely to experience 
+                    good mental health. On the other hand, those who neglect 
+                    these activities are at a higher risk of anxiety, 
+                    depression, and lower life satisfaction. While The 
+                    Big 5 won’t eliminate life’s challenges, they provide 
+                    the tools to handle stress, overcome setbacks, and 
+                    maintain a healthier, more balanced mindset.
+                </p>
+        </div>
+
+        <div class="circle-container medium what-3">
+            <h2>Key Messages</h2>
+            <ul>
+                <li>The Big 5 are essential for our mental health.</li>
+                <li>Not doing The Big 5 regularly is linked to poor mental health.</li>
+                <li>Doing The Big 5 regularly supports good mental health.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testimonies">
+        <div>            
+            <p>"I used to feel overwhelmed balancing study, work, and social 
+                life. When I started practicing The Big 5—especially setting 
+                goals and maintaining healthy routines—I noticed a big 
+                difference. I feel more in control of my time and much 
+                less stressed."
+            </p>
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section id="explore">
+
+
+
+
+    </section>
+
+
+    <section id="self-evaluation">
+        <div class="quiz">
+            <h2>Self Evaluation Checklist</h2>
+            <p>Use this checklist to reflect on how often you engage in The 
+                Big 5 and discover simple ways to improve your mental well-being.
+            </p>
+        </div>
+        
+
+
+
+    
+        <div class="circle-container large" id="quiz-container">
+            <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>
+
+            
+
+            <!-- Meaningful Activities -->
+            <div class="questions active">
+                <h3>Meaningful Activity</h3>
+                <p>I did something enjoyable</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <div class="questions">
+                <h3>Meaningful Activity</h3>
+                <p>I had something to look forward to</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <div class="questions">
+                <h3>Meaningful Activity</h3>
+                <p>I did something that was very satisfying to me</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <!-- Healthy Thinking -->
+            <div class="questions">
+                <h3>Healthy Thinking</h3>
+                <p>I kept a realistic perspective on things</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <div class="questions">
+                <h3>Healthy Thinking</h3>
+                <p>I dealt with feelings of frustration or impatience in a healthy way</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <div class="questions">
+                <h3>Healthy Thinking</h3>
+                <p>I treated myself with respect</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <!-- Goals and Plans -->
+            <div class="questions">
+                <h3>Goals and Plans</h3>
+                <p>I did something to help me live my “ideal” life</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <div class="questions">
+                <h3>Goals and Plans</h3>
+                <p>I did something to help me achieve my goals</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <!-- Healthy Routines -->
+            <div class="questions">
+                <h3>Healthy Routines</h3>
+                <p>I went to bed and woke up at a regular time</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+    
+            <!-- Social Connections -->
+            <div class="questions">
+                <h3>Social Connections</h3>
+                <p>I socialized with positive people</p>
+                <sl-radio-group size="large">
+                    <sl-radio value="1">Every day</sl-radio>
+                    <sl-radio value="2">5-6 times per week</sl-radio>
+                    <sl-radio value="3">3-4 times per week</sl-radio>
+                    <sl-radio value="4">1-2 times per week</sl-radio>
+                    <sl-radio value="5">Never</sl-radio>
+                </sl-radio-group>
+            </div>
+
+        <!-- Final Results Screen -->
+        <div id="results-screen" class="questions" style="display: none;">
+            <h3>Your Self Evaluation Results</h3>
+            <p id="results-message"></p>
+            <sl-button variant="warning" id="reset-btn">Retake Quiz</sl-button>
+        </div>
+    
+            <!-- Navigation Buttons -->
+            <div class="navigation">
+                <sl-button variant="primary" id="prev-btn" disabled>Back</sl-button>
+                <sl-button variant="primary" id="next-btn">Next</sl-button>
+                <sl-button variant="success" id="submit-btn" style="display: none;">Submit</sl-button>
+            </div>
+
+            
+        </div>
+    </section>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>
+            This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+        </p>
+    </footer>
+    
+    <script src="main.js"></script>
 </body>
 </html>

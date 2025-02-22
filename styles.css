@@ -8,22 +8,329 @@
 
 
   body, html {
-    background: #EAECE0;
+    background: #fffdf1;
     color: black;
     margin: 0;
     padding: 0;
     font-family: 'Zen Maru Gothic';
+
+    scroll-behavior: smooth;
+  }
+
+  body {
+    max-width: 1200px;
+    margin:0 auto;
+    position: relative;
+
+    z-index: -9;
   }
 
   h1 {
+    font-size: 3em;
+    color: #fffdf1;
+    
+  }
+
+  h1, p {
     margin: 0;
     padding: 0;
   }
 
+  section {
+    padding-top: 150px;
+    min-height: 100vh;
+    z-index: -10;
+
+  }
+
   /*---------------HEADER---------------*/
+header {
+  position:fixed;
+
+  width: 100%; 
+  max-width: 1200px;
+
+  margin-top: 0.5em;
+  padding: 1em;
+
+  z-index:99;
+
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+  background: #5FC5D4;
+  box-shadow: var(--sl-shadow-large);
+
+  border-radius: 1em;
+}
+
+.menu {
+  font-size: 4em;
+  color: #fffdf1;
+}
+
+.menu:hover{
+  color: black;
+  transition: ease-in-out 0.6s;
+
+}
+
+
+
+
+/*---------------CIRCLE DIVS---------------*/
+.circle-container {
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+  background: #fec81a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -1;
+}
+
+.circle-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(50%);
+
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+
+/* Small Circle */
+.circle-container.small {
+  width: 20vh;
+  height: 20vh;
+}
+
+.circle-container.small::before {
+  width: 30vh;
+  height: 30vh;
+}
+
+.circle-container.small::after {
+  width: 40vh;
+  height: 40vh;
+}
+
+/* Medium Circle */
+.circle-container.medium {
+  width: 30vh;
+  height: 30vh;
+}
+
+.circle-container.medium::before {
+  width: 40vh;
+  height: 40vh;
+}
+
+.circle-container.medium::after {
+  width: 50vh;
+  height: 50vh;
+}
+
+/* Large Circle */
+.circle-container.large {
+  width: 40vh;
+  height: 40vh;
+}
+
+.circle-container.large::before {
+  width: 50vh;
+  height: 50vh;
+}
+
+.circle-container.large::after {
+  width: 60vh;
+  height: 60vh;
+}
+
+/* Outer Circles */
+.circle-container::before,
+.circle-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+/* First Outer Circle */
+.circle-container::before {
+  background: rgba(254, 200, 26, 0.5); /* Slightly faded */
+  z-index: -2;
+}
+
+/* Second Outer Circle */
+.circle-container::after {
+  background: rgba(254, 200, 26, 0.2); /* More faded */
+  z-index: -3;
+}
+
+.circle-container p{
+  width: 75%;
+  text-overflow: ellipsis;
+}
+
+.circle-container h2, ul, p{
+  z-index: 10;
+}
 
 
 
 
 
-  /*---------------MAIN---------------*/
+/*---------------MAIN---------------*/
+
+
+aside {
+  height: 100%;
+
+  width: 10%;
+  position: absolute;
+  right: 0px;
+
+  z-index: 98;
+
+  max-height: 100vh;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.icon {
+  color: #5FC5D4;
+  font-size: 3.5em;
+  border-radius: 50%;
+  text-align: center;
+  padding: 1rem;
+  border: 3px solid #5FC5D4;
+
+  
+}
+
+.group {
+  position: fixed;
+  z-index: 98;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+/*---------------Intro Section---------------*/
+#intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.intro-para{
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+  align-self: flex-end;
+}
+
+.slider-wrapper{
+  grid-column-start: 2;
+  grid-row-start: 2;
+
+  align-self: flex-start;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/*---------------WHAT IS IT SECTION---------------*/
+#what-is-it{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  justify-items: center;
+  align-items: center;
+}
+
+
+.what-1{
+  grid-column-start: 2;
+  grid-row-start: 1;
+
+}
+
+.what-2{
+  grid-column-start: 1;
+  grid-row-start: 2;
+
+}
+
+.what-3{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  align-self: start;
+}
+
+/*---------------SELF EVAL Section---------------*/
+
+
+
+
+/*---------------QUIZ---------------*/
+.questions {
+  display: none;
+}
+
+.questions.active {
+  display: block;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+sl-progress-bar {
+  width: 50%;/* Adjust width */
+  margin-top: 1em; /* Add spacing */
+}
