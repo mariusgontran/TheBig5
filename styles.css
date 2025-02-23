@@ -383,6 +383,7 @@ aside {
 
 
 
+
 .eval-container {
   width: 100%;
   height: 60vh;
@@ -391,21 +392,34 @@ aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 
+.eval
+
+
+sl-radio-group {
+  text-align: left;
+
+}
 
 
 
 /*---------------QUIZ---------------*/
 .questions {
   display: none;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .questions.active {
   display: block;
+  opacity: 1;
+  z-index: 1;
 }
+
+
 
 .navigation {
   margin-top: 20px;
@@ -416,7 +430,18 @@ sl-progress-bar {
   margin-top: 1em;
 }
 
+#results-screen {
+  display: none; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out; 
+}
 
+#results-screen.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 
 
 
@@ -435,7 +460,7 @@ sl-progress-bar {
   justify-content: center;
   align-items: center;
 
-  z-index: -1;
+
 }
 
 .circle-container img{
@@ -486,6 +511,15 @@ sl-progress-bar {
   height: 500px;
 }
 
+@media only screen and (max-width:768px){
+
+  .circle-container.large {
+    width: 100vw;
+    height: 100vw;
+
+}
+}
+
 .circle-container.large::before {
   width: 600px;
   height: 600px;
@@ -518,6 +552,9 @@ sl-progress-bar {
 }
 
 .circle-container p{
+  text-align: center;
+  margin: 10px auto;
+
   width: 75%;
   text-overflow: ellipsis;
 }

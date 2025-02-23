@@ -288,6 +288,23 @@
 
     <section id="explore">
 
+        <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circle 1 -->
+            <circle cx="50" cy="50" r="20" fill="#5FC5D4">
+              <animate attributeName="r" values="20;30;20" dur="2s" begin="0s" repeatCount="indefinite" />
+            </circle>
+          
+            <!-- Circle 2 -->
+            <circle cx="150" cy="50" r="30" fill="#5FC5D4">
+              <animate attributeName="r" values="20;30;20" dur="2s" begin="0.4s" repeatCount="indefinite" />
+            </circle>
+          
+            <!-- Circle 3 -->
+            <circle cx="250" cy="50" r="40" fill="#5FC5D4">
+              <animate attributeName="r" values="20;30;20" dur="2s" begin="0.8s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+
 
 
 
@@ -303,8 +320,6 @@
         </div>
         
 
-
-
         <div class="eval-container">
             <div class="circle-container large" id="quiz-container">
                 <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>
@@ -315,7 +330,7 @@
                 <div class="questions active">
                     <h3>Meaningful Activity</h3>
                     <p>I did something enjoyable</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -327,7 +342,7 @@
                 <div class="questions">
                     <h3>Meaningful Activity</h3>
                     <p>I had something to look forward to</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -339,7 +354,7 @@
                 <div class="questions">
                     <h3>Meaningful Activity</h3>
                     <p>I did something that was very satisfying to me</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -352,7 +367,7 @@
                 <div class="questions">
                     <h3>Healthy Thinking</h3>
                     <p>I kept a realistic perspective on things</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -364,7 +379,7 @@
                 <div class="questions">
                     <h3>Healthy Thinking</h3>
                     <p>I dealt with feelings of frustration or impatience in a healthy way</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -376,7 +391,7 @@
                 <div class="questions">
                     <h3>Healthy Thinking</h3>
                     <p>I treated myself with respect</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -389,7 +404,7 @@
                 <div class="questions">
                     <h3>Goals and Plans</h3>
                     <p>I did something to help me live my “ideal” life</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -401,7 +416,7 @@
                 <div class="questions">
                     <h3>Goals and Plans</h3>
                     <p>I did something to help me achieve my goals</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -414,7 +429,7 @@
                 <div class="questions">
                     <h3>Healthy Routines</h3>
                     <p>I went to bed and woke up at a regular time</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -427,7 +442,7 @@
                 <div class="questions">
                     <h3>Social Connections</h3>
                     <p>I socialized with positive people</p>
-                    <sl-radio-group size="large">
+                    <sl-radio-group size="medium">
                         <sl-radio value="1">Every day</sl-radio>
                         <sl-radio value="2">5-6 times per week</sl-radio>
                         <sl-radio value="3">3-4 times per week</sl-radio>
@@ -448,13 +463,16 @@
                     <sl-button variant="primary" id="prev-btn" disabled>Back</sl-button>
                     <sl-button variant="primary" id="next-btn">Next</sl-button>
                     <sl-button variant="success" id="submit-btn" style="display: none;">Submit</sl-button>
-                </div>
-    
+                </div>   
                 
             </div>
-
-
         </div>
+
+
+
+
+
+
 
     </section>
 

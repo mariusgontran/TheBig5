@@ -62,13 +62,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let scores = [];
 
     function updateProgressBar() {
-        const progress = ((currentQuestion + 1) / questions.length) * 100;
-        progressBar.value = progress;
+        progressBar.value = ((currentQuestion + 1) / questions.length) * 100;
     }
 
     function showQuestion(index) {
         questions.forEach((q, i) => {
             q.classList.toggle("active", i === index);
+            q.setAttribute("aria-hidden", i !== index);
         });
 
         prevBtn.disabled = index === 0;
@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     nextBtn.addEventListener("click", () => {
         const selectedValue = document.querySelector(".questions.active sl-radio-group")?.value;
-        if (selectedValue) {
-            scores[currentQuestion] = parseInt(selectedValue);
+        if (selectedValue !== undefined) {
+            scores[currentQuestion] = parseInt(selectedValue) || 0;
             if (currentQuestion < questions.length - 1) {
                 currentQuestion++;
                 showQuestion(currentQuestion);
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     submitBtn.addEventListener("click", () => {
         const totalScore = scores.reduce((a, b) => a + b, 0);
         let message;
-
+    
         if (totalScore <= 15) {
             message = "Great job! You are actively engaging in The Big 5 and supporting your mental well-being.";
         } else if (totalScore <= 30) {
@@ -110,13 +110,18 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             message = "You may benefit from engaging more with The Big 5 to support your well-being.";
         }
-
+    
         resultsMessage.textContent = message;
-        questions.forEach(q => q.classList.remove("active"));
+    
         resultsScreen.style.display = "block";
+        resultsScreen.style.opacity = "1";
+        resultsScreen.style.visibility = "visible";
+        
+        questions.forEach(q => q.classList.remove("active"));
         submitBtn.style.display = "none";
         prevBtn.style.display = "none";
         nextBtn.style.display = "none";
+        
         updateProgressBar();
     });
 
@@ -127,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         submitBtn.style.display = "none";
         prevBtn.style.display = "inline-block";
         nextBtn.style.display = "inline-block";
+        progressBar.value = 0;
     });
 
     showQuestion(currentQuestion);
