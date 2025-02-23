@@ -41,6 +41,10 @@ prevButton.addEventListener('click', prevImage);
 updateImage();
 
 
+//Dialogs
+
+
+
 
 
 //Quiz

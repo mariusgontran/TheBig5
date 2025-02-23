@@ -3,47 +3,44 @@
 
 /*---------------BODY---------------*/
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 
-  body, html {
-    background: #fffdf1;
-    color: black;
-    margin: 0;
-    padding: 0;
-    font-family: 'Zen Maru Gothic';
+body, html {
+  background: #fffdf1;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic';
 
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  body {
-    max-width: 1200px;
-    margin:0 auto;
-    position: relative;
+body {
+  max-width: 1200px;
+  margin:0 auto;
+  position: relative;
 
-    z-index: -9;
-  }
+  z-index: -9;
+}
 
-  h1 {
-    font-size: 3em;
-    color: #fffdf1;
-    
-  }
+h1 {
+  font-size: 3em;
+  color: #fffdf1;
+  
+}
 
-  h1, p {
-    margin: 0;
-    padding: 0;
-  }
+h1, p {
+  margin: 0;
+  padding: 0;
+}
 
-  section {
-    padding-top: 150px;
-    min-height: 100vh;
-    z-index: -10;
+section {
+  padding-top: 150px;
+}
 
-  }
-
-  /*---------------HEADER---------------*/
+/*---------------HEADER---------------*/
 header {
   position:fixed;
 
@@ -78,119 +75,33 @@ header {
 
 
 
+@media only screen and (max-width:768px){
 
-/*---------------CIRCLE DIVS---------------*/
-.circle-container {
-  position: relative;
-  border-radius: 50%;
-  text-align: center;
-  background: #fec81a;
+  header{
+    width: 100vw;
+    padding: 0.5em;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .menu {
+    font-size: 2em;
+    color: #fffdf1;
+  }
 
-  z-index: -1;
-}
+  h1 {
+    font-size: 2em;   
+  }
 
-.circle-container img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: circle(50%);
 
-  transition: opacity 1s ease-in-out;
 }
 
 
 
-
-/* Small Circle */
-.circle-container.small {
-  width: 20vh;
-  height: 20vh;
-}
-
-.circle-container.small::before {
-  width: 30vh;
-  height: 30vh;
-}
-
-.circle-container.small::after {
-  width: 40vh;
-  height: 40vh;
-}
-
-/* Medium Circle */
-.circle-container.medium {
-  width: 30vh;
-  height: 30vh;
-}
-
-.circle-container.medium::before {
-  width: 40vh;
-  height: 40vh;
-}
-
-.circle-container.medium::after {
-  width: 50vh;
-  height: 50vh;
-}
-
-/* Large Circle */
-.circle-container.large {
-  width: 40vh;
-  height: 40vh;
-}
-
-.circle-container.large::before {
-  width: 50vh;
-  height: 50vh;
-}
-
-.circle-container.large::after {
-  width: 60vh;
-  height: 60vh;
-}
-
-/* Outer Circles */
-.circle-container::before,
-.circle-container::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  z-index: -2;
-}
-
-/* First Outer Circle */
-.circle-container::before {
-  background: rgba(254, 200, 26, 0.5); /* Slightly faded */
-  z-index: -2;
-}
-
-/* Second Outer Circle */
-.circle-container::after {
-  background: rgba(254, 200, 26, 0.2); /* More faded */
-  z-index: -3;
-}
-
-.circle-container p{
-  width: 75%;
-  text-overflow: ellipsis;
-}
-
-.circle-container h2, ul, p{
-  z-index: 10;
-}
 
 
 
 
 
 /*---------------MAIN---------------*/
-
-
 aside {
   height: 100%;
 
@@ -207,6 +118,12 @@ aside {
   align-items: center;
 }
 
+@media only screen and (max-width:768px){
+  aside {
+    display: none;
+  }
+}
+
 
 
 .icon {
@@ -216,6 +133,8 @@ aside {
   text-align: center;
   padding: 1rem;
   border: 3px solid #5FC5D4;
+
+  box-shadow: var(--sl-shadow-large);
 
   
 }
@@ -242,11 +161,68 @@ aside {
   align-items: center;
 }
 
+
+
+
 .intro-para{
   grid-column-start: 1;
   grid-row-start: 1;
 
   align-self: flex-end;
+}
+
+.dots{
+  display:flex;
+  align-items:center;
+  gap: 2em;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  align-self: center;
+}
+
+.down-dot {
+  border-radius: 50%;
+  
+  color: black;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+.dot1 {
+  background:#89d9e6;
+
+  width: 2em;
+  height: 2em;
+  animation-delay: 0s;
+}
+
+.dot2 {
+  background:#b6e9f1;
+
+  width: 1em;
+  height: 1em;
+  animation-delay: 0.4s;
+
+}
+
+.dot3{
+  background:#a9e7f0;
+
+  width: 1.5em;
+  height: 1.5em;
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(30vh);
+  }
 }
 
 .slider-wrapper{
@@ -283,6 +259,31 @@ aside {
   right: 10px;
 }
 
+
+
+
+@media only screen and (max-width:768px){
+  #intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap:30vh;
+  }
+
+
+  .slider-wrapper {
+    grid-column-start: 1;
+    grid-row-start: 2;
+
+  }
+
+  .dots{
+    display: none;
+  }
+
+
+}
+
 /*---------------WHAT IS IT SECTION---------------*/
 #what-is-it{
   display: grid;
@@ -312,7 +313,87 @@ aside {
   align-self: start;
 }
 
+
+@media only screen and (max-width:768px){
+  #what-is-it{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .what-1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+  
+  }
+  
+  .what-2{
+    grid-column-start: 1;
+    grid-row-start: 2;
+  
+  }
+  
+  .what-3{
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+}
+
+
+
+
+/*---------------TESTIMONIES SECTION---------------*/
+.testimony {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  margin: 5rem;
+}
+
+.testimony-content {
+  border:solid 3px #5FC5D4;
+  border-radius: 10px;
+  padding: 1em;
+  width: 50%;
+  box-shadow: var(--sl-shadow-large);
+}
+
+
+@media only screen and (max-width:768px){
+  .testimony {
+    flex-direction: column;
+    gap: 1em
+
+
+  }
+
+  .testimony-content {
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+
+
+
 /*---------------SELF EVAL Section---------------*/
+
+
+
+.eval-container {
+  width: 100%;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
 
 
 
@@ -331,6 +412,113 @@ aside {
 }
 
 sl-progress-bar {
-  width: 50%;/* Adjust width */
-  margin-top: 1em; /* Add spacing */
+  width: 50%;
+  margin-top: 1em;
 }
+
+
+
+
+
+
+
+
+/*---------------CIRCLE DIVS---------------*/
+.circle-container {
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+  background: #fec81a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -1;
+}
+
+.circle-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(50%);
+}
+
+
+
+
+/* Small Circle */
+.circle-container.small {
+  width: 200px;
+  height: 200px;
+}
+
+.circle-container.small::before {
+  width: 250px;
+  height: 250px;
+}
+
+.circle-container.small::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Medium Circle */
+.circle-container.medium {
+  width: 400px;
+  height: 400px;
+}
+
+.circle-container.medium::before {
+  width: 500px;
+  height: 500px;
+}
+
+.circle-container.medium::after {
+  width: 600px;
+  height: 600px;
+}
+
+/* Large Circle */
+.circle-container.large {
+  width: 500px;
+  height: 500px;
+}
+
+.circle-container.large::before {
+  width: 600px;
+  height: 600px;
+}
+
+.circle-container.large::after {
+  width: 700px;
+  height: 700px;
+}
+
+/* Outer Circles */
+.circle-container::before,
+.circle-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+/* First Outer Circle */
+.circle-container::before {
+  background: rgba(254, 200, 26, 0.5); /* Slightly faded */
+
+}
+
+/* Second Outer Circle */
+.circle-container::after {
+  background: rgba(254, 200, 26, 0.2); /* More faded */
+
+}
+
+.circle-container p{
+  width: 75%;
+  text-overflow: ellipsis;
+}
+

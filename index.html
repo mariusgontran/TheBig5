@@ -61,8 +61,21 @@
                 <sl-icon name="heart-pulse" class="icon"></sl-icon>
             </sl-tooltip>
         </div>
-
     </aside>
+
+
+    <sl-dialog label="Dialog" class="dialog-deny-close">
+        <h2>Goals and Plans</h2>
+        <p>
+            Good mental health doesn’t happen by chance—it’s built 
+            through daily habits. Research with over 20,000 
+            people has revealed five type of actions that 
+            support mental well-being.
+        </p>
+        
+        
+        <sl-button slot="footer" variant="primary">Close</sl-button>
+    </sl-dialog>
 
 
 
@@ -80,8 +93,18 @@
                     actions are called "The Big 5" and doing them regularly 
                     is a great way to help you boost resilience, 
                     improve mood, and maintain a healthier mind.
-                </p>        
+                </p>
+                
+
             </div>
+
+            <div class="dots">
+                <span class="down-dot dot1"></span>
+                <span class="down-dot dot2"></span>
+                <span class="down-dot dot3"></span>
+            </div>
+
+
 
 
             <div class="slider-wrapper">
@@ -147,20 +170,117 @@
     </section>
 
     <section id="testimonies">
-        <div>            
-            <p>"I used to feel overwhelmed balancing study, work, and social 
-                life. When I started practicing The Big 5—especially setting 
-                goals and maintaining healthy routines—I noticed a big 
-                difference. I feel more in control of my time and much 
-                less stressed."
-            </p>
+
+        <div class="testimony">
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-olly-3762800.jpg">
+            </div> 
+
+            <div class="testimony-content">            
+                <h3>Emily, 24 – University Student</h3>    
+                <p>
+                    "I used to feel overwhelmed balancing study, work, and social 
+                    life. When I started practicing The Big 5—especially setting 
+                    goals and maintaining healthy routines—I noticed a big 
+                    difference. I feel more in control of my time and much 
+                    less stressed."
+                </p>
+            </div>
+ 
+
+        </div>
+
+
+        <div class="testimony">
+            <div class="testimony-content">
+                <h3>James, 37 – Working Professional</h3>
+                <p>
+                    "Work stress was taking a toll on me, and I was constantly 
+                    exhausted. The Big 5 helped me realize that small, consistent 
+                    actions—like taking time for meaningful activities and 
+                    connecting with friends—could make a huge difference. Now, 
+                    I feel more balanced and energized."
+                </p>
+            </div>   
+            
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-buro-millennial-636760-1438081.jpg">
+            </div>
+
         </div>
 
 
 
+        <div class="testimony">
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-jopwell-2422293.jpg">
+            </div>
+
+            <div class="testimony-content">
+                <h3>Lisa, 42 – Busy Parent</h3>
+                <p>
+                    "Between work and family, I never made time for myself. 
+                    The Big 5 showed me that even small changes, like setting 
+                    personal goals and maintaining a routine, could improve 
+                    my mental well-being. I feel happier, more patient, and 
+                    more present with my family."
+                </p>
+            </div>
+    
+
+        </div>
+
+
+        <div class="testimony">
+            <div class="testimony-content">
+                <h3>Michael, 65 – Retiree</h3>
+                <p>"After retiring, I felt a bit lost and disconnected. 
+                    Focusing on meaningful activities and social connections 
+                    helped me regain a sense of purpose. Now, I make it a 
+                    point to stay active, meet friends, and enjoy hobbies I 
+                    had forgotten about."
+                </p>
+            </div>
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-marcus-aurelius-6787934.jpg">
+            </div>
+        </div>
 
 
 
+        <div class="testimony">
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-prolificpeople-29359847.jpg">
+            </div>
+            <div class="testimony-content">
+                <h3>Sophie, 30 – Small Business Owner</h3>
+                <p>"Running a business can be stressful, and I didn’t 
+                    realize how much I was neglecting my mental health. 
+                    Practicing The Big 5—especially healthy thinking and 
+                    social connections—helped me build resilience and 
+                    manage stress more effectively."
+                </p>
+            </div>
+        </div>
+
+
+        <div class="testimony"> 
+            <div class="testimony-content">
+                <h3>Nathan, 19 – Student & Part-Time Worker</h3>
+                <p>"I always thought mental health was about big, 
+                    complicated changes. But The Big 5 taught me 
+                    that small, everyday habits—like getting enough 
+                    sleep, setting goals, and staying connected—can really 
+                    improve how I feel. I’m more focused, motivated, and 
+                    less anxious."
+                </p>
+            </div>
+
+            <div class="circle-container small">
+                <img src="images/avatars/pexels-rdne-7683888.jpg">
+            </div> 
+
+        </div>
 
 
     </section>
@@ -185,153 +305,157 @@
 
 
 
+        <div class="eval-container">
+            <div class="circle-container large" id="quiz-container">
+                <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>
     
-        <div class="circle-container large" id="quiz-container">
-            <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>
+                
+    
+                <!-- Meaningful Activities -->
+                <div class="questions active">
+                    <h3>Meaningful Activity</h3>
+                    <p>I did something enjoyable</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <div class="questions">
+                    <h3>Meaningful Activity</h3>
+                    <p>I had something to look forward to</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <div class="questions">
+                    <h3>Meaningful Activity</h3>
+                    <p>I did something that was very satisfying to me</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <!-- Healthy Thinking -->
+                <div class="questions">
+                    <h3>Healthy Thinking</h3>
+                    <p>I kept a realistic perspective on things</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <div class="questions">
+                    <h3>Healthy Thinking</h3>
+                    <p>I dealt with feelings of frustration or impatience in a healthy way</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <div class="questions">
+                    <h3>Healthy Thinking</h3>
+                    <p>I treated myself with respect</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <!-- Goals and Plans -->
+                <div class="questions">
+                    <h3>Goals and Plans</h3>
+                    <p>I did something to help me live my “ideal” life</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <div class="questions">
+                    <h3>Goals and Plans</h3>
+                    <p>I did something to help me achieve my goals</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <!-- Healthy Routines -->
+                <div class="questions">
+                    <h3>Healthy Routines</h3>
+                    <p>I went to bed and woke up at a regular time</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+        
+                <!-- Social Connections -->
+                <div class="questions">
+                    <h3>Social Connections</h3>
+                    <p>I socialized with positive people</p>
+                    <sl-radio-group size="large">
+                        <sl-radio value="1">Every day</sl-radio>
+                        <sl-radio value="2">5-6 times per week</sl-radio>
+                        <sl-radio value="3">3-4 times per week</sl-radio>
+                        <sl-radio value="4">1-2 times per week</sl-radio>
+                        <sl-radio value="5">Never</sl-radio>
+                    </sl-radio-group>
+                </div>
+    
+            <!-- Final Results Screen -->
+            <div id="results-screen" class="questions" style="display: none;">
+                <h3>Your Self Evaluation Results</h3>
+                <p id="results-message"></p>
+                <sl-button variant="warning" id="reset-btn">Retake Quiz</sl-button>
+            </div>
+        
+                <!-- Navigation Buttons -->
+                <div class="navigation">
+                    <sl-button variant="primary" id="prev-btn" disabled>Back</sl-button>
+                    <sl-button variant="primary" id="next-btn">Next</sl-button>
+                    <sl-button variant="success" id="submit-btn" style="display: none;">Submit</sl-button>
+                </div>
+    
+                
+            </div>
 
-            
 
-            <!-- Meaningful Activities -->
-            <div class="questions active">
-                <h3>Meaningful Activity</h3>
-                <p>I did something enjoyable</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <div class="questions">
-                <h3>Meaningful Activity</h3>
-                <p>I had something to look forward to</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <div class="questions">
-                <h3>Meaningful Activity</h3>
-                <p>I did something that was very satisfying to me</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <!-- Healthy Thinking -->
-            <div class="questions">
-                <h3>Healthy Thinking</h3>
-                <p>I kept a realistic perspective on things</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <div class="questions">
-                <h3>Healthy Thinking</h3>
-                <p>I dealt with feelings of frustration or impatience in a healthy way</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <div class="questions">
-                <h3>Healthy Thinking</h3>
-                <p>I treated myself with respect</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <!-- Goals and Plans -->
-            <div class="questions">
-                <h3>Goals and Plans</h3>
-                <p>I did something to help me live my “ideal” life</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <div class="questions">
-                <h3>Goals and Plans</h3>
-                <p>I did something to help me achieve my goals</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <!-- Healthy Routines -->
-            <div class="questions">
-                <h3>Healthy Routines</h3>
-                <p>I went to bed and woke up at a regular time</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-    
-            <!-- Social Connections -->
-            <div class="questions">
-                <h3>Social Connections</h3>
-                <p>I socialized with positive people</p>
-                <sl-radio-group size="large">
-                    <sl-radio value="1">Every day</sl-radio>
-                    <sl-radio value="2">5-6 times per week</sl-radio>
-                    <sl-radio value="3">3-4 times per week</sl-radio>
-                    <sl-radio value="4">1-2 times per week</sl-radio>
-                    <sl-radio value="5">Never</sl-radio>
-                </sl-radio-group>
-            </div>
-
-        <!-- Final Results Screen -->
-        <div id="results-screen" class="questions" style="display: none;">
-            <h3>Your Self Evaluation Results</h3>
-            <p id="results-message"></p>
-            <sl-button variant="warning" id="reset-btn">Retake Quiz</sl-button>
         </div>
-    
-            <!-- Navigation Buttons -->
-            <div class="navigation">
-                <sl-button variant="primary" id="prev-btn" disabled>Back</sl-button>
-                <sl-button variant="primary" id="next-btn">Next</sl-button>
-                <sl-button variant="success" id="submit-btn" style="display: none;">Submit</sl-button>
-            </div>
 
-            
-        </div>
     </section>
 
   
