@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
     <!-- Shoelace Components -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/themes/light.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/shoelace-autoloader.js"></script>
 </head>
 
@@ -31,9 +31,15 @@
     </header>
 
     <!-- Navigation menu slides in -->
-    <sl-drawer label="Menu" placement="start" class="drawer-placement-start">
-        <a href="#the_big_5">The Big 5</a>
-        <sl-button slot="footer" variant="primary">Close</sl-button>
+    <sl-drawer label="The Big 5" placement="start" class="drawer-placement-start" style="--size: 100vw;">
+        <div class="menu-flex">
+            <a href="#intro">Introduction</a>
+            <a href="#what-is-it">What is it?</a>
+            <a href="#how-it-works">How does it work?</a>
+            <a href="#testimonies">Read testimonies</a>
+            <a href="#self-evaluation">Complete a self-evaluation</a>
+            <sl-button slot="footer" variant="primary">Close</sl-button>
+        </div>
     </sl-drawer>
 
     <!-- Navigation element fixed on right side of page -->
@@ -64,7 +70,7 @@
                 and energised. Goals give us something to look
                 forward to and stop us dwelling on past problems.</strong>
             </div>
-            <img src="images//dialogs/pexels-karolina-grabowska-5908719.jpg">
+            <img src="images//dialogs/pexels-karolina-grabowska-5908719.jpg" alt="Woman using laptop and calendar to organise events">
             <div class="blue-div">
                 <ul>
                     <li>Visualise your “ideal” life and then plan to do something
@@ -94,7 +100,7 @@
             <div class="yellow-div"><strong>Routines we do automatically like our sleep routine, eating well or being
             active, are critical for good mental health. These actions set us up for the day.</strong>
             </div>
-            <img src="images/dialogs/pexels-karolina-grabowska-6334235.jpg">
+            <img src="images/dialogs/pexels-karolina-grabowska-6334235.jpg" alt="A man packing his belongings into his bag while sitting at his desk">
             <div class="blue-div">
                 <ul>
                     <li>Think about when you last felt grounded – 
@@ -127,7 +133,7 @@
             friends or tribe, help us to feel validated and give us a sense 
             of belonging.</strong>
             </div>
-            <img src="images/dialogs/pexels-ron-lach-9809812.jpg">
+            <img src="images/dialogs/pexels-ron-lach-9809812.jpg" alt="A group of friends sitting around a cafe table">
             <div class="blue-div">
                 <ul>
                     <li>Reflect on your connections; are you regularly 
@@ -158,7 +164,7 @@
             This also means keeping perspective and treating ourselves with respect,
             particularly when things are difficult.</strong>
             </div>
-            <img src="images/dialogs/pexels-kdbishopphotography-135013.jpg">
+            <img src="images/dialogs/pexels-kdbishopphotography-135013.jpg" alt="A woman seated at picnic bench, reflecting and smiling">
             <div class="blue-div">
                 <ul>
                     <li>Check your self-talk – are you being self-critical (for example, are you criticising yourself)?</li>
@@ -187,7 +193,7 @@
             simple as listening to a favourite song or watching a good show, and they are
             often fun and engaging.</strong>
             </div>
-            <img src="images/dialogs/pexels-mikhail-nilov-7530436.jpg">
+            <img src="images/dialogs/pexels-mikhail-nilov-7530436.jpg" alt="An elderly couple exericising together">
             <div class="blue-div">
                 <ul>
                     <li>Reflect on what you really love to do, but have stopped doing?</li>
@@ -251,7 +257,7 @@
 
     <!-- What Is It Section -->
     <section id="what-is-it">
-        <div class="circle-container large what-1">
+        <div class="circle-container large what-1 up">
             <h2>What is it?</h2>
             <p>
                 The Big 5 is a set of five proven actions that play a 
@@ -269,7 +275,7 @@
             </p>
         </div>
 
-        <div class="circle-container large what-2">
+        <div class="circle-container large what-2 up" id="how-it-works">
                 <h2>How it works?</h2>
                 <p>
                     Research has identified a tipping point for mental 
@@ -284,7 +290,7 @@
                 </p>
         </div>
 
-        <div class="circle-container medium what-3">
+        <div class="circle-container medium what-3 up">
             <h2>Key Messages</h2>
             <ul>
                 <li>The Big 5 are essential for our mental health.</li>
@@ -298,7 +304,7 @@
     <section id="testimonies">
         <div class="testimony">
             <div class="circle-container small">
-                <img src="images/avatars/pexels-olly-3762800.jpg">
+                <img src="images/avatars/pexels-olly-3762800.jpg" alt="A young woman, standing, with a backpack and holding folders">
             </div> 
 
             <div class="testimony-content right">            
@@ -324,12 +330,12 @@
                 </p>
             </div>               
             <div class="circle-container small">
-                <img src="images/avatars/pexels-buro-millennial-636760-1438081.jpg">
+                <img src="images/avatars/pexels-buro-millennial-636760-1438081.jpg" alt="A man, seated, using his laptop">
             </div>
         </div>
         <div class="testimony">
             <div class="circle-container small">
-                <img src="images/avatars/pexels-jopwell-2422293.jpg">
+                <img src="images/avatars/pexels-jopwell-2422293.jpg" alt="A woman at her work desk sitting next to her colleagues">
             </div>
             <div class="testimony-content right">
                 <h3>Lisa, 42 – Busy Parent</h3>
@@ -353,12 +359,12 @@
                 </p>
             </div>
             <div class="circle-container small">
-                <img src="images/avatars/pexels-marcus-aurelius-6787934.jpg">
+                <img src="images/avatars/pexels-marcus-aurelius-6787934.jpg" alt="An elderly man smiling while holding his phone">
             </div>
         </div>
         <div class="testimony">
             <div class="circle-container small">
-                <img src="images/avatars/pexels-prolificpeople-29359847.jpg">
+                <img src="images/avatars/pexels-prolificpeople-29359847.jpg" alt="A woman sitting on a couch and using her laptop">
             </div>
             <div class="testimony-content right">
                 <h3>Sophie, 30 – Small Business Owner</h3>
@@ -382,7 +388,7 @@
                 </p>
             </div>
             <div class="circle-container small">
-                <img src="images/avatars/pexels-rdne-7683888.jpg">
+                <img src="images/avatars/pexels-rdne-7683888.jpg" alt="A young man sitting on a bench, reading a book and smiling">
             </div> 
         </div>
     </section>
@@ -420,7 +426,7 @@
             </p>
         </div>        
 
-        <div class="eval-container">
+        <div class="eval-container up">
             <div class="circle-container large" id="quiz-container">
                 <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>           
     

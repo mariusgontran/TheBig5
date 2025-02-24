@@ -1,13 +1,26 @@
-//Drawer Menu
+// Drawer Menu
+// Controls the navigation drawer opening and closing
 const drawer = document.querySelector('.drawer-placement-start');
 const openButton = document.querySelector('.open-drawer');
 const closeButton = drawer.querySelector('sl-button[variant="primary"]');
+const navLinks = document.querySelectorAll(".menu-flex a");
 
+// Open the drawer when clicking the menu button
 openButton.addEventListener('click', () => drawer.show());
+
+// Close the drawer when clicking the close button
 closeButton.addEventListener('click', () => drawer.hide());
 
+// Close the drawer when clicking on a navigation link
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        drawer.hide();
+    });
+});
 
-//Image slider
+
+// Image slider
+// Controls an image slider that cycles through predefined images
 const sliderContainer = document.querySelector('.intro-img');
 const nextButton = document.querySelector('.next');
 const prevButton = document.querySelector('.prev');
@@ -21,27 +34,33 @@ const images = [
 
 let currentIndex = 0;
 
+// Function to update the image being displayed
 function updateImage() {
     sliderContainer.innerHTML = `<img class="slide" src="${images[currentIndex]}" alt="">`;
 }
 
+// Function to move to the next image
 function nextImage() {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
 }
 
+// Function to move to the previous image
 function prevImage() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateImage();
 }
 
+// Event listeners for next and previous buttons
 nextButton.addEventListener('click', nextImage);
 prevButton.addEventListener('click', prevImage);
 
+// Initialize the first image
 updateImage();
 
 
-//Dialogs
+// Dialogs
+// Controls dialog pop-ups when clicking on icons
 document.querySelectorAll(".icon").forEach(icon => {
     icon.addEventListener("click", () => {
         const dialogId = icon.getAttribute("data-dialog");
@@ -54,7 +73,8 @@ document.querySelectorAll(".icon").forEach(icon => {
 
 
 
-//Quiz
+// Quiz
+// Handles quiz navigation, progress tracking, and results display
 document.addEventListener("DOMContentLoaded", function() {
     const questions = document.querySelectorAll(".questions");
     const nextBtn = document.getElementById("next-btn");
@@ -68,10 +88,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentQuestion = 0;
     let scores = [];
 
+    // Function to update progress bar based on quiz progress
     function updateProgressBar() {
         progressBar.value = ((currentQuestion + 1) / questions.length) * 100;
     }
 
+    // Function to show the current question
     function showQuestion(index) {
         questions.forEach((q, i) => {
             q.classList.toggle("active", i === index);
@@ -86,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateProgressBar();
     }
 
+    // Move to the next question
     nextBtn.addEventListener("click", () => {
         const selectedValue = document.querySelector(".questions.active sl-radio-group")?.value;
         if (selectedValue !== undefined) {
@@ -99,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Move to the previous question
     prevBtn.addEventListener("click", () => {
         if (currentQuestion > 0) {
             currentQuestion--;
@@ -106,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Calculate and display quiz results
     submitBtn.addEventListener("click", () => {
         const totalScore = scores.reduce((a, b) => a + b, 0);
         let message;
@@ -132,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateProgressBar();
     });
 
+    // Reset the quiz
     resetBtn.addEventListener("click", () => {
         currentQuestion = 0;
         scores = [];
@@ -148,8 +174,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Animations
+// Scroll animations using GSAP and ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+// Animate elements from the right
 gsap.utils.toArray(".right").forEach((element) => {
     gsap.fromTo(element, 
         { x: 700, opacity: 0 },
@@ -165,6 +193,7 @@ gsap.utils.toArray(".right").forEach((element) => {
     );
 });
 
+// Animate elements from the left
 gsap.utils.toArray(".left").forEach((element) => {
     gsap.fromTo(element, 
         { x: -700, opacity: 0 }, 
@@ -180,6 +209,24 @@ gsap.utils.toArray(".left").forEach((element) => {
     );
 });
 
+// Animate elements from the bottom
+gsap.utils.toArray(".up").forEach((element) => {
+    gsap.fromTo(element, 
+        { y: -100, opacity: 0 }, 
+        { 
+            y: 0, opacity: 1, duration: 1, ease: "power2.out",
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%", 
+                end: "top 20%", 
+                toggleActions: "play none none reverse", 
+            }
+        }
+    );
+});
+
+
+// Pulse effect on icons
 gsap.to(".icon", {
     scale: 1.2,
     duration: 1.1,
