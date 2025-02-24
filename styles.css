@@ -10,18 +10,21 @@
 body, html {
   background: #fffdf1;
   color: black;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;;
+  padding: 0 !important;;
   font-family: 'Zen Maru Gothic';
 
   scroll-behavior: smooth;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   max-width: 1200px;
-  margin:0 auto;
   position: relative;
-
   z-index: -9;
 }
 
@@ -345,7 +348,7 @@ aside {
 .testimony {
   display: flex;
   align-items: center;
-  gap: 3em;
+  gap: 1em;
   margin: 5rem;
 }
 
@@ -353,7 +356,7 @@ aside {
   border:solid 3px #5FC5D4;
   border-radius: 10px;
   padding: 1em;
-  width: 50%;
+  width: 60%;
   box-shadow: var(--sl-shadow-large);
 }
 
@@ -374,6 +377,92 @@ aside {
 }
 
 
+/*---------------EXPLORE SECTION---------------*/
+
+.explore-desktop{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width:768px){
+  .explore-desktop{
+    display: none;
+  }
+
+}
+
+
+/*---------------DIALOGS---------------*/
+.dialog {
+  width: 900px;
+
+
+}
+
+.dialog-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em;
+
+}
+
+.yellow-div{
+  background: #FEDD6F;
+  border-radius: 10px;
+  border: 2px solid #fec81a;
+  padding: 1em;
+
+
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.yellow-div2{
+  background: #FEDD6F;
+  border-radius: 10px;
+  border: 2px solid #fec81a;
+  padding: 1em;
+
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.yellow-div, .yellow-div2, .blue-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+
+}
+
+
+
+
+.blue-div{
+  width: 100%;
+  background: #89d9e6;
+  border-radius: 10px;
+  border: 2px solid #5FC5D4;
+  padding: 1em;
+
+  grid-row-start: 2;
+}
+
+.dialog img{
+  border-radius: 10px;
+  width: 100%;
+
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+
+
 
 
 
@@ -381,7 +470,10 @@ aside {
 
 /*---------------SELF EVAL Section---------------*/
 
-
+#self-evaluation{
+  min-height: 100vh;
+  padding-top: 10rem;
+}
 
 
 .eval-container {

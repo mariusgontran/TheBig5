@@ -21,65 +21,201 @@
     <!-- Shoelace Components -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/themes/light.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/shoelace-autoloader.js"></script>
-
-
 </head>
 
 <body>
+    <!-- Title Bar with hamburger button and page title -->
     <header class="--sl-shadow-large">    
             <sl-icon name="list" class="menu open-drawer"></sl-icon>
             <h1>The Big 5</h1>
     </header>
 
+    <!-- Navigation menu slides in -->
     <sl-drawer label="Menu" placement="start" class="drawer-placement-start">
         <a href="#the_big_5">The Big 5</a>
         <sl-button slot="footer" variant="primary">Close</sl-button>
     </sl-drawer>
 
-
-
-
-
-
-
-
+    <!-- Navigation element fixed on right side of page -->
    <aside>
         <div class="group">
             <sl-tooltip content="Goals and Plans" placement="left">
-                <sl-icon name="bullseye" class="icon"></sl-icon>
+                <sl-icon name="bullseye" class="icon" data-dialog="dialog-goals"></sl-icon>
             </sl-tooltip>
             <sl-tooltip content="Healthy Routines" placement="left">
-                <sl-icon name="alarm" class="icon"></sl-icon>
+                <sl-icon name="alarm" class="icon" data-dialog="dialog-routines"></sl-icon>
             </sl-tooltip>
             <sl-tooltip content="Social Connections" placement="left">
-                <sl-icon name="people" class="icon"></sl-icon>
+                <sl-icon name="people" class="icon" data-dialog="dialog-social"></sl-icon>
             </sl-tooltip>
             <sl-tooltip content="Healthy Thinking" placement="left">
-                <sl-icon name="clouds" class="icon"></sl-icon>
+                <sl-icon name="clouds" class="icon" data-dialog="dialog-thinking"></sl-icon>
             </sl-tooltip>
             <sl-tooltip content="Meaningful Activities" placement="left">
-                <sl-icon name="heart-pulse" class="icon"></sl-icon>
+                <sl-icon name="heart-pulse" class="icon" data-dialog="dialog-activities"></sl-icon>
             </sl-tooltip>
         </div>
     </aside>
 
+    <!-- Dialogs -->
+    <sl-dialog label="Goals and Plans" class="dialog" style="--width:900px" id="dialog-goals">
+        <div class="dialog-grid">
+            <div class="yellow-div"><strong>Having a goal or a plan helps us stay motivated
+                and energised. Goals give us something to look
+                forward to and stop us dwelling on past problems.</strong>
+            </div>
+            <img src="images//dialogs/pexels-karolina-grabowska-5908719.jpg">
+            <div class="blue-div">
+                <ul>
+                    <li>Visualise your “ideal” life and then plan to do something
+                        simple that will help you to start to achieve your vision</li>
+                    <li>Use an online calendar or notebook to help
+                        remind you of your goals and plans</li>
+                    <li>Make a commitment each day to do something simple
+                        that will help improve or maintain your quality of life</li>
+                </ul>
+            </div>
+            <div class="yellow-div2">
+                Practical examples:
+                <ul>
+                    <li>Clean or organise your home</li>
+                    <li>Set simple goals for each week</li>
+                    <li>Check-in on your goals regularly</li>
+                    <li>Plan a day-trip or holiday</li>
+                    <li>Write a list of your long-term goals</li>
+                </ul>
+            </div>
+        </div>
+        <sl-button slot="footer" variant="primary" onclick="this.closest('sl-dialog').hide()">Close</sl-button>
+    </sl-dialog>
 
-    <sl-dialog label="Dialog" class="dialog-deny-close">
-        <h2>Goals and Plans</h2>
-        <p>
-            Good mental health doesn’t happen by chance—it’s built 
-            through daily habits. Research with over 20,000 
-            people has revealed five type of actions that 
-            support mental well-being.
-        </p>
-        
-        
-        <sl-button slot="footer" variant="primary">Close</sl-button>
+    <sl-dialog label="Healthy Routines" class="dialog"  style="--width:900px" id="dialog-routines">
+        <div class="dialog-grid">
+            <div class="yellow-div"><strong>Routines we do automatically like our sleep routine, eating well or being
+            active, are critical for good mental health. These actions set us up for the day.</strong>
+            </div>
+            <img src="images/dialogs/pexels-karolina-grabowska-6334235.jpg">
+            <div class="blue-div">
+                <ul>
+                    <li>Think about when you last felt grounded – 
+                        what were your habits and routines?</li>
+                    <li>Reflect on your work, home, relationship and 
+                        ‘personal passion’ routines – what can you tweak?</li>
+                    <li>Make small changes immediately, and remember 
+                        to celebrate the improvements</li>
+                </ul>
+            </div>
+            <div class="yellow-div2">
+                Practical examples:
+                <ul>
+                    <li>Set a regular sleep/wake time</li>
+                    <li>Spend time outside each day</li>
+                    <li>Drink lots of water</li>
+                    <li>Set a simple, daily routine</li>
+                    <li>Maintain work-time and home-time boundaries</li>
+		            <li>Take regular breaks during your work<li>
+                </ul>
+            </div>
+        </div>
+        <sl-button slot="footer" variant="primary" onclick="this.closest('sl-dialog').hide()">Close</sl-button>
+    </sl-dialog>
+
+    <sl-dialog label="Social Connections" class="dialog"  style="--width:900px" id="dialog-social">
+        <div class="dialog-grid">
+            <div class="yellow-div"><strong>Regular contact with people we 
+                love and respect, which may include our family,
+            friends or tribe, help us to feel validated and give us a sense 
+            of belonging.</strong>
+            </div>
+            <img src="images/dialogs/pexels-ron-lach-9809812.jpg">
+            <div class="blue-div">
+                <ul>
+                    <li>Reflect on your connections; are you regularly 
+                        connecting with the people you love and value?</li>
+                    <li>Don’t wait for others to connect, pick up your 
+                        phone and SMS a message to someone you miss</li>
+                    <li>Remember that most people want to hear from you!</li>
+                </ul>
+            </div>
+            <div class="yellow-div2">
+                Practical examples:
+                <ul>
+                    <li>Call/text someone you miss</li>
+                    <li>Spend time with someone you care about</li>
+                    <li>Watch a show with someone</li>
+                    <li>Have coffee/meal with someone</li>
+                    <li>Help a friend with something</li>
+			        <li>Organise a group social activity</li>
+                </ul>
+            </div>
+        </div>            
+        <sl-button slot="footer" variant="primary" onclick="this.closest('sl-dialog').hide()">Close</sl-button>
+    </sl-dialog>
+
+    <sl-dialog label="Healthy Thinking" class="dialog"  style="--width:900px" id="dialog-thinking">
+        <div class="dialog-grid">
+            <div class="yellow-div"><strong>This means having realistic thoughts about ourselves, the world, and the future.
+            This also means keeping perspective and treating ourselves with respect,
+            particularly when things are difficult.</strong>
+            </div>
+            <img src="images/dialogs/pexels-kdbishopphotography-135013.jpg">
+            <div class="blue-div">
+                <ul>
+                    <li>Check your self-talk – are you being self-critical (for example, are you criticising yourself)?</li>
+                    <li>Check your expectations - are you expecting too much from yourself or from others?</li>
+                    <li>If you are being self-critical or have unrealistic expectations, please give yourself a break - allow yourself to be less than perfect</li>
+                </ul>
+            </div>
+            <div class="yellow-div2">
+                Practical examples:
+                <ul>
+                    <li>Be kind to yourself</li>
+                    <li>Reward yourself</li>
+                    <li>Keep a realistic perspective on things</li>
+                    <li>Challenge negative or unhelpful thoughts</li>
+                    <li>Allow yourself to be less than perfect</li>
+                    <li>Do not dwell on the worst-case scenario</li>
+                </ul>
+            </div>
+        </div>
+        <sl-button slot="footer" variant="primary" onclick="this.closest('sl-dialog').hide()">Close</sl-button>
+    </sl-dialog>
+
+    <sl-dialog label="Meaningful Activities" class="dialog"  style="--width:900px" id="dialog-activities">
+        <div class="dialog-grid">
+            <div class="yellow-div"><strong>These are actions that give us a sense of accomplishment, satisfaction or joy. They can be as
+            simple as listening to a favourite song or watching a good show, and they are
+            often fun and engaging.</strong>
+            </div>
+            <img src="images/dialogs/pexels-mikhail-nilov-7530436.jpg">
+            <div class="blue-div">
+                <ul>
+                    <li>Reflect on what you really love to do, but have stopped doing?</li>
+                    <li>Think about the things you can start to do again – but keep your expectations realistic</li>
+                    <li>Schedule simple things that make you relax, smile and laugh (for example, listen to your favourite music, read your favourite book, watch your favourite movie, etc)</li>
+                </ul>
+            </div>
+            <div class="yellow-div2">
+                Practical examples:
+                <ul>
+                    <li>Read a book</li>
+                    <li>Go for a walk, run or go to the gym</li>
+                    <li>Listen to music or a podcast</li>
+                    <li>Work in the garden</li>
+                    <li>Watch a favourite show</li>
+                    <li>Cook a favourite meal</li>
+                </ul>
+            </div>
+        </div>
+        <sl-button slot="footer" variant="primary" onclick="this.closest('sl-dialog').hide()">Close</sl-button>
     </sl-dialog>
 
 
 
 
+
+
+    <!-- Intro Section -->
     <section id="intro">
             <div class="circle-container large intro-para">
                 <p>
@@ -94,38 +230,27 @@
                     is a great way to help you boost resilience, 
                     improve mood, and maintain a healthier mind.
                 </p>
-                
-
             </div>
 
+            <!-- Bouncing dots -->
             <div class="dots">
                 <span class="down-dot dot1"></span>
                 <span class="down-dot dot2"></span>
                 <span class="down-dot dot3"></span>
             </div>
 
-
-
-
+            <!-- Image slider -->
             <div class="slider-wrapper">
                 <a class="prev">&#10094;</a>
                 <div class="circle-container medium intro-img">
                 </div>
                 <a class="next">&#10095;</a>
             </div>
-            
-
-
-
-
-    
     </section>
 
 
-
+    <!-- What Is It Section -->
     <section id="what-is-it">
-
-
         <div class="circle-container large what-1">
             <h2>What is it?</h2>
             <p>
@@ -169,14 +294,14 @@
         </div>
     </section>
 
+    <!-- Testimonies Section -->
     <section id="testimonies">
-
         <div class="testimony">
             <div class="circle-container small">
                 <img src="images/avatars/pexels-olly-3762800.jpg">
             </div> 
 
-            <div class="testimony-content">            
+            <div class="testimony-content right">            
                 <h3>Emily, 24 – University Student</h3>    
                 <p>
                     "I used to feel overwhelmed balancing study, work, and social 
@@ -186,13 +311,9 @@
                     less stressed."
                 </p>
             </div>
- 
-
         </div>
-
-
         <div class="testimony">
-            <div class="testimony-content">
+            <div class="testimony-content left">
                 <h3>James, 37 – Working Professional</h3>
                 <p>
                     "Work stress was taking a toll on me, and I was constantly 
@@ -201,22 +322,16 @@
                     connecting with friends—could make a huge difference. Now, 
                     I feel more balanced and energized."
                 </p>
-            </div>   
-            
+            </div>               
             <div class="circle-container small">
                 <img src="images/avatars/pexels-buro-millennial-636760-1438081.jpg">
             </div>
-
         </div>
-
-
-
         <div class="testimony">
             <div class="circle-container small">
                 <img src="images/avatars/pexels-jopwell-2422293.jpg">
             </div>
-
-            <div class="testimony-content">
+            <div class="testimony-content right">
                 <h3>Lisa, 42 – Busy Parent</h3>
                 <p>
                     "Between work and family, I never made time for myself. 
@@ -225,14 +340,10 @@
                     my mental well-being. I feel happier, more patient, and 
                     more present with my family."
                 </p>
-            </div>
-    
-
+            </div>  
         </div>
-
-
         <div class="testimony">
-            <div class="testimony-content">
+            <div class="testimony-content left">
                 <h3>Michael, 65 – Retiree</h3>
                 <p>"After retiring, I felt a bit lost and disconnected. 
                     Focusing on meaningful activities and social connections 
@@ -245,14 +356,11 @@
                 <img src="images/avatars/pexels-marcus-aurelius-6787934.jpg">
             </div>
         </div>
-
-
-
         <div class="testimony">
             <div class="circle-container small">
                 <img src="images/avatars/pexels-prolificpeople-29359847.jpg">
             </div>
-            <div class="testimony-content">
+            <div class="testimony-content right">
                 <h3>Sophie, 30 – Small Business Owner</h3>
                 <p>"Running a business can be stressful, and I didn’t 
                     realize how much I was neglecting my mental health. 
@@ -262,10 +370,8 @@
                 </p>
             </div>
         </div>
-
-
         <div class="testimony"> 
-            <div class="testimony-content">
+            <div class="testimony-content left">
                 <h3>Nathan, 19 – Student & Part-Time Worker</h3>
                 <p>"I always thought mental health was about big, 
                     complicated changes. But The Big 5 taught me 
@@ -275,56 +381,48 @@
                     less anxious."
                 </p>
             </div>
-
             <div class="circle-container small">
                 <img src="images/avatars/pexels-rdne-7683888.jpg">
             </div> 
-
         </div>
+    </section>
 
-
+    <!-- Explore Section -->
+    <section id="explore" class="explore">
+        <div class="explore-desktop">
+            <div class="circle-container small pulse-trigger">
+                <h3>Explore The Big 5 by clicking on the side icons.</h3>
+            </div>    
+            <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Ring 1 -->
+                <circle cx="100" cy="200" r="100" fill="none" stroke="#5FC5D4" stroke-width="3">
+                  <animate attributeName="r" values="40;50;40" dur="2s" begin="0s" repeatCount="indefinite" />
+                </circle>
+                <!-- Ring 2 -->
+                <circle cx="220" cy="200" r="50" fill="none" stroke="#5FC5D4" stroke-width="3">
+                  <animate attributeName="r" values="30;40;30" dur="2s" begin="0.2s" repeatCount="indefinite" />
+                </circle>
+                <!-- Ring 3 -->
+                <circle cx="320" cy="200" r="50" fill="none" stroke="#5FC5D4" stroke-width="3">
+                  <animate attributeName="r" values="20;30;20" dur="2s" begin="0.4s" repeatCount="indefinite" />
+                </circle>
+              </svg>
+        </div>
     </section>
 
 
-    <section id="explore">
-
-        <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
-            <!-- Circle 1 -->
-            <circle cx="50" cy="50" r="20" fill="#5FC5D4">
-              <animate attributeName="r" values="20;30;20" dur="2s" begin="0s" repeatCount="indefinite" />
-            </circle>
-          
-            <!-- Circle 2 -->
-            <circle cx="150" cy="50" r="30" fill="#5FC5D4">
-              <animate attributeName="r" values="20;30;20" dur="2s" begin="0.4s" repeatCount="indefinite" />
-            </circle>
-          
-            <!-- Circle 3 -->
-            <circle cx="250" cy="50" r="40" fill="#5FC5D4">
-              <animate attributeName="r" values="20;30;20" dur="2s" begin="0.8s" repeatCount="indefinite" />
-            </circle>
-          </svg>
-
-
-
-
-    </section>
-
-
-    <section id="self-evaluation">
+    <!-- Self Evaluation Section -->
+     <section id="self-evaluation">
         <div class="quiz">
             <h2>Self Evaluation Checklist</h2>
             <p>Use this checklist to reflect on how often you engage in The 
                 Big 5 and discover simple ways to improve your mental well-being.
             </p>
-        </div>
-        
+        </div>        
 
         <div class="eval-container">
             <div class="circle-container large" id="quiz-container">
-                <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>
-    
-                
+                <sl-progress-bar id="progress-bar" value="0"></sl-progress-bar>           
     
                 <!-- Meaningful Activities -->
                 <div class="questions active">
@@ -467,33 +565,20 @@
                 
             </div>
         </div>
-
-
-
-
-
-
-
     </section>
-
-  
-
-
-
-
-
-
-
-
-
-
-
+    
     <footer>
         <p>
             This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
         </p>
     </footer>
+
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     
+    <!-- Javascript file -->
     <script src="main.js"></script>
 </body>
 </html>

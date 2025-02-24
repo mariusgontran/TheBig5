@@ -42,8 +42,15 @@ updateImage();
 
 
 //Dialogs
-
-
+document.querySelectorAll(".icon").forEach(icon => {
+    icon.addEventListener("click", () => {
+        const dialogId = icon.getAttribute("data-dialog");
+        const dialog = document.getElementById(dialogId);
+        if (dialog) {
+            dialog.show();
+        }
+    });
+});
 
 
 
@@ -137,3 +144,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
     showQuestion(currentQuestion);
 });
+
+
+
+//Animations
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".right").forEach((element) => {
+    gsap.fromTo(element, 
+        { x: 700, opacity: 0 },
+        { 
+            x: 0, opacity: 1, duration: 1, ease: "power2.out",
+            scrollTrigger: {
+                trigger: element,
+                start: "top 60%", 
+                end: "top 40%",   
+                toggleActions: "play none none reverse", 
+            }
+        }
+    );
+});
+
+gsap.utils.toArray(".left").forEach((element) => {
+    gsap.fromTo(element, 
+        { x: -700, opacity: 0 }, 
+        { 
+            x: 0, opacity: 1, duration: 1, ease: "power2.out",
+            scrollTrigger: {
+                trigger: element,
+                start: "top 60%", 
+                end: "top 20%", 
+                toggleActions: "play none none reverse", 
+            }
+        }
+    );
+});
+
+gsap.to(".icon", {
+    scale: 1.2,
+    duration: 1.1,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+    scrollTrigger: {
+        trigger: ".pulse-trigger", 
+        start: "top 100%",    
+        end: "bottom 10%",   
+        toggleActions: "play pause resume pause"
+    }
+})
+
